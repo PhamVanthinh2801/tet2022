@@ -2,8 +2,12 @@ import { useState } from "react";
 
 export default function Home() {
   const [randomNumber, setrandomNumber] = useState(0);
+  const [count, setcount] = useState(0);
+  const number = 0;
   const getRandomInt = () => {
     const randomNumber = Math.floor(Math.random() * 10);
+    number = number + 1;
+    setcount(number);
     setrandomNumber(randomNumber);
   };
 
@@ -48,18 +52,18 @@ export default function Home() {
 
       <div style={{ width: "640px", marginTop: "12px" }}>
         <div
-          className='bg-white w-full m-auto '
+          className='w-full m-auto p-3'
           style={{
-            height: "540px",
+            height: "auto",
             borderRadius: "12px",
             backgroundColor: "#A52A2A",
           }}
         >
-          <p className='text-white text-center text-3xl pt-2'>
-            {randomNumber === 0 ? <h1>Chúc Mừng Năm mới 2022</h1> : ""}
+          <p className='text-white text-center text-base pt-3'>
+            {randomNumber === 0 ? <p>Chúc Mừng Năm mới 2022</p> : ""}
             {randomNumber === 1 ? (
               <div>
-                <h1>
+                <p>
                   – Vừa đủ HẠNH PHÚC để giữ tâm hồn bạn được ngọt ngào. – Vừa đủ
                   THỬ THÁCH để giữ bạn luôn kiên nhẫn. – Vừa đủ MUỘN PHIỀN để
                   giữ bạn thật sự tỉnh táo. – Vừa đủ HY VỌNG để cho bạn được
@@ -68,7 +72,7 @@ export default function Home() {
                   được an ủi. – Vừa đủ VẬT CHẤT để đáp ứng các nhu cầu vật chất
                   của bạn. – Vừa đủ NHIỆT TÌNH để bạn cho đời thêm hân hoan. –
                   Vừa đủ NIỀM TIN để xua tan những thất vọng.
-                </h1>
+                </p>
                 <img
                   src='https://res.cloudinary.com/hiname/image/upload/v1644052041/tet/353039_xqxvsn.jpg'
                   width={200}
@@ -80,11 +84,11 @@ export default function Home() {
             )}
             {randomNumber === 2 ? (
               <div>
-                <h1>
+                <p>
                   Chúc mừng năm mới Nhâm Dần 2022. Chúc năm mới sức khỏe dẻo
                   dai, công việc thuận lợi thăng tiến dài dài, phi những nước
                   đại tiến tới thành công.
-                </h1>{" "}
+                </p>{" "}
                 <img
                   src='https://res.cloudinary.com/hiname/image/upload/v1644052041/tet/353039_xqxvsn.jpg'
                   width={200}
@@ -96,10 +100,10 @@ export default function Home() {
             )}
             {randomNumber === 3 ? (
               <div>
-                <h1>
+                <p>
                   Xuân này hơn hẳn mấy xuân qua. Phúc lộc đưa nhau đến từng nhà.
                   Vài lời cung chúc tân niên mới. Vạn sự an khang vạn sự lành.
-                </h1>{" "}
+                </p>{" "}
                 <img
                   src='https://res.cloudinary.com/hiname/image/upload/v1644052041/tet/353039_xqxvsn.jpg'
                   width={200}
@@ -116,11 +120,11 @@ export default function Home() {
                   width={200}
                   style={{ margin: "auto", borderRadius: "12px" }}
                 />{" "}
-                <h1>
+                <p>
                   Hoa đào nở, chim én về, mùa xuân lại đến. Chúc một năm mới:
                   nghìn sự như ý, vạn sự như mơ, triệu sự bất ngờ, tỷ lần hạnh
                   phúc.
-                </h1>
+                </p>
               </div>
             ) : (
               ""
@@ -132,12 +136,12 @@ export default function Home() {
                   width={200}
                   style={{ margin: "auto", borderRadius: "12px" }}
                 />
-                <h1>
+                <p>
                   Cung chúc tân xuân phước vĩnh cửu – Chúc trong gia quyến được
                   an khương – Tân niên lai đáo đa phú quý – Xuân đến an khương
                   vạn thọ tường. Đây là lời chúc mừng năm mới thể hiện chút hán
                   nôm mà các cụ hay dùng chúc nhau rất nho nhã.
-                </h1>
+                </p>
               </div>
             ) : (
               ""
@@ -149,11 +153,11 @@ export default function Home() {
                   width={200}
                   style={{ margin: "auto", borderRadius: "12px" }}
                 />
-                <h1>
+                <p>
                   Kính chúc mọi người một năm mới tràn đầy niềm vui và hạnh
                   phúc: Vui trong sức khoẻ, trẻ trong tâm hồn, khôn trong lý
                   tưởng và trưởng thành mọi lĩnh vực.
-                </h1>
+                </p>
               </div>
             ) : (
               ""
@@ -165,7 +169,7 @@ export default function Home() {
                   width={200}
                   style={{ margin: "auto", borderRadius: "12px" }}
                 />
-                <h1>
+                <p>
                   Mùa xuân xin chúc – Khúc ca an bình – Năm mới phát tài – Vạn
                   sự như ý – Già trẻ lớn bé – Đầy ắp tiếng cười – Trên mặt ngời
                   ngời – Tràn đầy hạnh phúc – Xuân đến hy vọng – Ấm no mọi nhà –
@@ -173,7 +177,7 @@ export default function Home() {
                   khoẻ dồi dào – Đôi lứa yêu nhau – Càng thêm nồng ấm – Các em
                   bé nhỏ – Học giỏi chăm ngoan – Chúc Tết mọi người – Năm mới
                   hoan hỉ – Gặp nhiều niềm vui.
-                </h1>
+                </p>
               </div>
             ) : (
               ""
@@ -185,7 +189,7 @@ export default function Home() {
                   width={200}
                   style={{ margin: "auto", borderRadius: "12px" }}
                 />
-                <h1>
+                <p>
                   Năm hết Tết đến – Chúc ông chúc bà – Chúc cha chúc mẹ – Chúc
                   cô chúc cậu – Chúc chú chúc dì – Chúc anh chúc chị – Chúc luôn
                   các em – Chúc cả các cháu – Dồi dào sức khoẻ – Có nhiều niềm
@@ -193,7 +197,7 @@ export default function Home() {
                   Về nhà người rước – Tiền vô như nước – Tình vào đầy tim – Chăn
                   ấm nệm êm – Sung sướng ban đêm – Hạnh phúc ban ngày – Luôn
                   luôn gặp may – Tràn đầy hạnh phúc.
-                </h1>
+                </p>
               </div>
             ) : (
               ""
@@ -205,12 +209,12 @@ export default function Home() {
                   width={200}
                   style={{ margin: "auto", borderRadius: "12px" }}
                 />
-                <h1>
+                <p>
                   Năm mới Tết đến – Rước hên vào nhà – Quà cáp bao la – Mọi nhà
                   no đủ – Vàng bạc đầy tủ – Gia chủ phát tài – Già trẻ gái trai
                   – Sum vầy hạnh phúc – Cầu tài chúc phúc – Lộc đến quanh năm –
                   An khang thịnh vượng. Lời chúc năm mới qua điện thoại.
-                </h1>
+                </p>
               </div>
             ) : (
               ""
