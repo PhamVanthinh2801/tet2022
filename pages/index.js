@@ -1,9 +1,11 @@
 import { useState } from "react";
+import Clock from "react-live-clock";
 
 export default function Home() {
   const [randomNumber, setrandomNumber] = useState(0);
   const [count, setcount] = useState(0);
   const number = 0;
+  const d = new Date(); // today, now
   const getRandomInt = () => {
     const randomNumber = Math.floor(Math.random() * 10);
     number = number + 1;
@@ -59,6 +61,29 @@ export default function Home() {
             backgroundColor: "#A52A2A",
           }}
         >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div
+              style={{
+                borderRadius: "50%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              className='bg-[#FFD700] h-48 w-48 text-red-500 text-3xl font-bold'
+            >
+              <Clock format={"HH:mm:ss"} ticking={true} timezone={"ICT"} />
+              <p> {d.toLocaleDateString("pt-PT")}</p>
+            </div>
+          </div>
+
           <p className='text-white text-center text-base pt-3'>
             {randomNumber === 0 ? <p>Chúc Mừng Năm mới 2022</p> : ""}
             {randomNumber === 1 ? (
