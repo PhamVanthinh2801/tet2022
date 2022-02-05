@@ -243,6 +243,7 @@ export default function Home() {
         </div>
         <div
           onClick={getRandomInt}
+          style={{ maxWidth: "260px" }}
           className='flex justify-center p-2 rounded-md bg-[#FFD700] h-auto m-auto mt-10 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300'
         >
           <p className='text-3xl text-center text-red-600 font-sans font-bold'>
