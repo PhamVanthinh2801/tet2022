@@ -56,7 +56,7 @@ export default function Home() {
           }}
         >
           <p className='text-white text-center text-3xl pt-2'>
-            {randomNumber === 0 ? <h1>Năm mới 2022</h1> : ""}
+            {randomNumber === 0 ? <h1>Chúc Mừng Năm mới 2022</h1> : ""}
             {randomNumber === 1 ? (
               <div>
                 <h1>
